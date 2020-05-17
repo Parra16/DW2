@@ -1,5 +1,6 @@
 <div class="container">
     <!-- producto individual -->
+
     <div class="row contenedor w-100  mt-5 mb-5">
         <div class="col-md-5 mr-5">
             <img class="img-fluid mt-4 ml-2 mb-2" src="<?=base_url?>uploads/images/<?=$pro->imagen?>" alt="Producto"

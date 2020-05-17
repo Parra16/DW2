@@ -1,0 +1,6 @@
+Ecommerce 
+
+Link de proyecto en producción: https://ecommerce-mex.herokuapp.com/
+
+User admin: jovani@gmail.com
+Pass: 123

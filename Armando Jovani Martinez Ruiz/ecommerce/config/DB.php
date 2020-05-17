@@ -8,11 +8,14 @@ class Database{
 
     //Base de datos remota (heroku);
       $db = new mysqli('us-cdbr-east-06.cleardb.net','b0a8dd73660ad8','7329d917','heroku_c3f9b5239fa339e');
-     
 
        $db->query("SET NAMES 'utf8'");
       
-       return $db;
+       if($db){
+        return $db;
+      }else {
+            echo "Error de conexion"; die();
+      }       
     }
 }
 

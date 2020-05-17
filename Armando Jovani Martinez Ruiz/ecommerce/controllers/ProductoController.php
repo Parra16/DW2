@@ -2,6 +2,7 @@
 
 require_once 'models/Producto.php';
 require_once 'models/categoria.php';
+require_once 'controllers/CategoriaController.php';
 //Controlador de productos
 class ProductoController{
 
@@ -10,6 +11,7 @@ class ProductoController{
         $producto = new Producto();
         $productos = $producto->getRand(8);
 
+        
         $categoria = new Categoria();
         $categorias = $categoria->getAll();
 
@@ -36,12 +38,13 @@ class ProductoController{
         }
       
         require_once 'views/producto/gestion.php';
+
     }
      
     public function crear(){
         Utils::isAdmin();
         $edit = false;
-        require_once 'views/Producto/crear.php';
+        require_once 'views/producto/crear.php';
     }
 
     //guarda nuevas categorias
@@ -165,12 +168,13 @@ class ProductoController{
             $producto = new Producto();
             $producto->setId($id);
 
-            $producto->delete();
+            $delete = $producto->delete();
 
-            if($producto == true ){
+           
+            if($delete == true ){
                 $_SESSION['confirmado']="Producto eliminado";
             }else{
-                $_SESSION['error']="Error al eliminar el producto";
+                $_SESSION['error']="Error al eliminar el producto ya que esta dentro de un pedido";
             }
         }
 
@@ -179,16 +183,17 @@ class ProductoController{
 
     //Visualiza el producto de manera individual
     public function individual(){
+
         $id = $_GET['id'];
 
         $producto = new Producto();
         
         $productos = $producto->getRand(3);
-        
+ 
         $producto->setId($id);
         $pro = $producto->getOne();
-
-        require_once 'views/Producto/individual.php';
+       
+        require_once 'views/producto/individual.php';
     }
 
     //realiza la busqueda de productos
@@ -202,10 +207,10 @@ class ProductoController{
     
             if($productos != false){
     
-               require_once 'views/Producto/busqueda.php';
+               require_once 'views/producto/busqueda.php';
             }else{
                 $_SESSION['error']="No se encontraron productos con la busqueda: ".$texto;
-                require_once 'views/Producto/busqueda.php';
+                require_once 'views/producto/busqueda.php';
             }
         }else{
             header('Location:'.base_url);
@@ -213,6 +218,17 @@ class ProductoController{
 
     }
 
+    //Resta stock cuando se venda un producto
+    public function updateStock($id,$unidades){
+
+        $id_producto = $id;
+        $unidades_producto = $unidades;
+
+        $producto = new Producto();
+
+        $producto->updateStock($id_producto,$unidades_producto);
+
+    }
 }
 
 ?>

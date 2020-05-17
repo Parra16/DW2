@@ -1,4 +1,4 @@
-<?php require_once 'controllers/categoriaController.php'; ?>
+<?php require_once 'models/categoria.php'; ?>
 
 <div class="container">
     <div class="row">
@@ -44,7 +44,6 @@
         </div>
     </div>
     <?php endif;
-    Utils::alertaClose();
     ?>
 
     <?php if(isset($_SESSION['error'])):?>

@@ -1,10 +1,10 @@
-<?php require_once 'controllers/categoriaController.php'; ?>
+<?php require_once 'controllers/CategoriaController.php'; ?>
 <!-- Inicio del menú -->
 
 <div class="row sticky-top" id="menu">
     <div class="col-xl-12 ">
         <nav class=" nav navbar navbar-expand-lg navbar-dark bg-dark ">
-            <a class="navbar-brand" href="index.php">Tienda Online</a>
+            <a class="navbar-brand" href="<?=base_url?>">Tienda Online</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
 
                         <?php else:?>
 
-                        <a class="user nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="user nav-link dropdown-toggle" href="<?=base_url?>usuarios/modal" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Usuario</a>
 

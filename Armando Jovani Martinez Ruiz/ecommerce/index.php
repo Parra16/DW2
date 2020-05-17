@@ -12,6 +12,7 @@
     include_once('views/layout/header.php');
     include_once('views/layout/menu.php');
     include_once('views/layout/banner.php');
+    
     //autocarga los controladores necesarios
 
     //  Main - Controlador frontal 
@@ -50,7 +51,7 @@
     // include_once('views/layout/contenido.php');
     include_once('views/layout/footer.php');
     // Otros componentes
-    include_once('views/Usuarios/login.php');
+    include_once('views/usuarios/login.php');
     include_once('views/usuarios/registro.php');
 
     ?>
