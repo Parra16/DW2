@@ -144,7 +144,6 @@ function validar(){
         url:'RegistraPersona.php',
         data:dataen,
         success:function(resp){
-            alert(resp);
             if(resp==="false"){
                 document.getElementById("alerta").innerHTML='<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a>Persona ya registrada</div>';  
             }else if(resp==="crepetido"){
@@ -256,35 +255,32 @@ function iguales(){
     var form = document.form1;
     var cont = document.getElementById('conta').value;
     var dataen = 'cont='+cont;
-    var flag=true;
-    $.ajax({
-        type:'post',
-        url:'BuscaContra.php',
-        data:dataen,
-        success:function(resp){
-            if(resp!="correcta"){
-                document.getElementById("alerta").innerHTML='<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a>Contraseña incorrecta.</div>';
-                flag=false;
-            }
-        }
-        
-    });
-    if(flag===true){
+    var flag=false;
+	var em = "";
+	$.ajax({
+		type:'post',
+		url:'BuscaContra.php',
+		data:dataen,
+		success:function(resp){
+			em=resp;
+			if(em==='INCORRECTA'){
+			document.getElementById("alerta").innerHTML='<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a>Contraseña incorrecta.</div>';
+			}
+		}
+		});
         if(form.nco.value===""){
             document.getElementById("alerta").innerHTML='<div class="alert alert-warning">La contraseña no puede estar vacia.</div>';
             form.nco.focus();
-        }else
-        if (form.nco.value!=form.rco.value){    
+        }else if (form.nco.value!=form.rco.value){    
             document.getElementById("alerta").innerHTML='<div class="alert alert-warning">Nueva contraseña no coinside.</div>';
             form.rco.focus();
-        }else
-        if (form.nco.value === form.conta.value) {
-            document.getElementById("alerta").innerHTML='<div class="alert alert-warning">La contraseña no debe ser igual a las anteriores.</div>';
-            form.nco.focus();
+        }else if (form.nco.value == form.conta.value) {
+			document.getElementById("alerta").innerHTML='<div class="alert alert-warning">La contraseña no debe ser igual a las anteriores.</div>';
+			form.nco.focus();
         }else{
             cont = document.getElementById('nco').value;
             dataen = 'cont='+cont;
-            $.ajax({
+				$.ajax({
                 type:'post',
                 url:'ActualizaContr.php',
                 data:dataen,
@@ -294,10 +290,17 @@ function iguales(){
                     }
                 }
             });
-            
         }
-
-    }
+$.ajax({
+		type:'post',
+		url:'BuscaContra.php',
+		data:dataen,
+		success:function(resp){
+			alert(resp);
+			em=resp;
+		}
+		});
+    
 
     return false;
 }
