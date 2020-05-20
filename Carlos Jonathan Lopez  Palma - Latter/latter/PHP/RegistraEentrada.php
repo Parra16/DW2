@@ -20,8 +20,8 @@
 		
 		$fechabd = date("Y-m-d",strtotime($mostrar['FECHA']));
 				
-		if(($mostrar['ESTADO']=="AUSENTE" & $mostrar['EDO']=="2" & $mostrar['FECHA']!=$hoy & $mostrar['FECHA']==$ayer)|
-			($mostrar['ESTADO']=="PRESENTE" & $mostrar['EDO']=="1" & $fechabd==$ayer)){
+		if(($mostrar['ESTADO']=="AUSENTE" & $mostrar['EDO']=="2" & $mostrar['FECHA']!=$hoy)|
+			($mostrar['ESTADO']=="PRESENTE" & $mostrar['EDO']=="1" & $mostrar['FECHA']!=$hoy)){
 			$query="UPDATE asistencia SET FECHA = '$hoy', EDO = '1', ESTADO = 'PRESENTE' WHERE IDPERSONA = '$user'";
 			$ejec=mysqli_query($con,$query);
 			
