@@ -91,7 +91,7 @@
                 <div>
                     <table class="tabla" id="t01">
                         <tr>
-                            <th>Descripción</th><th>Fecha</th><th>Hora</th><th>Monto</th>
+                            <th class="thur">Descripción</th><th class="thur">Fecha</th  class="thur"><th class="thur">Hora</th><th class="thur">Monto</th>
                         </tr>
                         <?php
                             include("ConBD.php");

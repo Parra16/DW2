@@ -11,7 +11,7 @@
         $mail->Host = "smtp.gmail.com"; // servidor smtp
         $mail->Port = 587; //puerto
         $mail->Username ='latter.proyecto@gmail.com'; //nombre usuario
-        $mail->Password = 'latter-py1'; //contraseña
+        $mail->Password = 'sdtypdqffoyssysf'; //contraseña
 
 
         //Agregar destinatario
