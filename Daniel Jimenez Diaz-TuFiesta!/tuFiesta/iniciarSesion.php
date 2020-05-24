@@ -13,7 +13,8 @@
         include 'conexion.php';
         //variables para la conexion        
         $conexion= mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-        //verificamos la conexion
+        
+        //verificamos la conexion        
         if(!$conexion){
             die("connection failed: ".mysqli_connect_error());
         }
@@ -23,24 +24,28 @@
         $pass = $_POST['pass'];       
         
         //consulta de la base de datos 
-        $result = mysqli_query($conexion, "SELECT email, tipoUsuario, contraseña FROM usuario where email = '$email' ");
+        $result = mysqli_query($conexion, "SELECT email, tipoUsuario, contraseña,idUsuario FROM usuario where email = '$email' ");
         //variable que tiene el resultado de la consulta
         $row = mysqli_fetch_assoc($result);        
         //variable que contiene la contraseña que esta en la base de datos 
         $hash = $row['contraseña'];
         //variable que contiene el tipo de usuario de la base de datos 
         $user = $row['tipoUsuario']; 
+        //variable del id de usuario
+        $ID = $row['idUsuario'];
         // en el siguiente if se verifica si la contraseña coincide con el hash de la base de datos y se crea una sesión
+        
         if(password_verify($_POST['pass'], $hash)){
             $_SESSION['loggedin'] = true;
-            $_SESSION['start'] = time();
+            $_SESSION['start'] = time();            
             $_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;
             
+            //iniciamos sesión y le mandamos el valor 
             if($user=='Anfitrion'){
-                header("location:anfitrionComentar.html");
+                header("location:anfitrionFiestas.php?id=$ID");                
             }else{
-                header("location:dueño.html");
-            }
+                header("location:informacionDeMiSalon.php?id=$ID");                
+            }            
         }else{
             echo "<div>
                     <p>Los datos que introduciste son incorrectos, verificalos<p>

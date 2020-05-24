@@ -22,10 +22,20 @@ body {
 
 .h-700 {
     font-weight: 700;
+    font-size: x-large;
+}
+
+.h-400 {
+    font-weight: 400;
+    font-size: large;
 }
 
 .centrar-texto {
     text-align: center;
+}
+
+.contenido-centrado {
+    max-width: 800px;
 }
 
 
@@ -54,13 +64,6 @@ body {
     background-color: #e08709;
     border-radius: 1rem;
     align-self: center;
-}
-
-
-/*utilidades*/
-
-.contenido-centrado {
-    max-width: 800px;
 }
 
 
@@ -198,38 +201,23 @@ section {
     border-bottom: 1px solid black;
 }
 
+hr {
+    border: 10px solid yellowgreen;
+    border-radius: 5px;
+}
+
 
 /*Estilos para las estrellas*/
 
-.ec-stars-wrapper {
-    /* Espacio entre los inline-block (los hijos, los `a`) 
-	 */
-    font-size: 0;
-    /* Podríamos quitarlo, 
-		pero de esta manera (siempre que no le demos padding), 
-		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
-		también se esté haciendo hover a alguna estrella */
-    display: inline-block;
-}
-
-.ec-stars-wrapper a {
-    text-decoration: none;
-    display: inline-block;
-    /* Volver a dar tamaño al texto */
-    font-size: 32px;
-    font-size: 2rem;
-    color: #888;
-}
-
-.ec-stars-wrapper:hover a {
-    color: yellowgreen;
-}
-
 
 /*
- * El selector de hijo, es necesario para aumentar la especifidad
- */
+Estilos para la tarjeta de busqueda y la barra de busqueda
+*/
 
-.ec-stars-wrapper>a:hover~a {
-    color: rgb(39, 130, 228);
+.tarjetaBusqueda {
+    background-color: #fafafa;
+    margin: 3.2rem;
+    padding: 0 5rem 5rem 5rem;
+    border: 2px solid #ccc;
+    border-radius: 7px;
 }
