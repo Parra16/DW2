@@ -10,9 +10,9 @@
     $result=mysqli_query($con,$query);
     $row = mysqli_fetch_array($result);
     $hash = $row['CONTRASENA'];
-    if (password_verify($_POST['cont'], $hash)) {	
-        echo 'correcta';
+    if (password_verify($co, $hash)) {	
+        echo 'CORRECTA';
     }else{
-        echo 'no es';
+        echo 'INCORRECTA';
     }
 ?>
