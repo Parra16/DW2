@@ -1,0 +1,65 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="altavehi.css" rel="stylesheet" type="text/css"/>
+	<title>Alta de vehiculo</title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="."/>
+
+	<style>
+
+	</style>
+
+</head>
+<body bgcolor="#FAFAF1">
+
+<form action="altaVehiculo" target="" method="post" name="formDatos">
+               
+    
+        <h1 align="center">Datos de vehiculo</h1>
+	<label for="nombre">Marca</label>
+	<input type="text" name="marca" id="marca" placeholder="Escribe marca"/>
+
+	<label for="apellidos">Modelo</label>
+	<input type="text" name="modelo" id="modelo" placeholder=" Esc modelo"/>
+	<label for="apellidos">Precio</label>
+	<input type="text" name="precio" id="precio" placeholder="Esc precio "/>
+	<label for="apellidos">Motor</label>
+	<input type="text" name="motor" id="motor" placeholder="Esc motor"/>
+	<label for="apellidos">Rines</label>
+	<input type="text" name="rines" id="rines" placeholder="Esc rines"/>
+	<label for="apellidos">Clase</label>
+	<input type="text" name="clase" id="clase" placeholder="Esc clase"/>
+
+        <label for="apellidos">Version</label>
+	<input type="text" name="version" id="version" placeholder="Esc version"/>
+        
+        <label for="apellidos">Tipo</label>
+	<input type="text" name="tipo" id="tipo" placeholder="Esc tipo"/>
+      
+        <label for="calle">Cilindrada</label>
+	<input type ="text" name="cilindrada" id="cilindrada" placeholder="Esc cilindrada"/>
+        
+    <label for="asunto">NIV</label>
+	<input type ="text" name="niv" id="niv" placeholder="Esc NIV"/>
+        
+        <label for="asunto">Pais Origen</label>
+	<input type ="text" name="pais" id="pais" placeholder="Esc pais"/>
+        
+        <label for="asunto">NCI</label>
+	<input type ="text" name="nci" id="nci" placeholder="Esc NCI"/>
+        
+        <label for="asunto">Color</label>
+	<input type ="text" name="color" id="color" placeholder="Esc color"/>
+    
+        
+        
+  
+	
+	<input type="submit" name="enviar" value="GUARDAR DATOS"/>
+</form>
+
+</body>
+</html>
