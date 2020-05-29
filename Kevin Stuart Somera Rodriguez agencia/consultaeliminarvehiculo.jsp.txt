@@ -1,0 +1,26 @@
+<%-- 
+    Document   : consultaeliminarvehiculo
+    Created on : 28/05/2020, 06:41:32 PM
+    Author     : kevin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="buscas.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Eliminar vehiculo</title>
+    </head>
+    < <body bgcolor="#292820">
+        
+        <form action="consultaeliminarvehicu" method="post" >
+            
+            <label for="nombre">Ingrese ID </label>
+	<input type="text" name="idv" id="idv" placeholder="Escribe id de vehiculo"/> 
+        <input type="submit" name="enviar" value="Buscar"/>
+        </form>
+        
+    
+    </body>
+</html>

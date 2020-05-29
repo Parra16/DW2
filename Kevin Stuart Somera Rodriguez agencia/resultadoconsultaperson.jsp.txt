@@ -1,0 +1,76 @@
+<%-- 
+    Document   : resultadoconsultaperson
+    Created on : 28/05/2020, 02:49:48 PM
+    Author     : kevin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="buscas.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cosulta de personal</title>
+    </head>
+    <body bgcolor="#292820">
+        <form action="altapersonalg" target="" method="post" name="formDatosPersonales">
+               
+    
+        <h1 align="center">Datos generales</h1>
+	<label for="nombre">Nombre</label>
+	<input type="text" name="nombres" id="nombre" readonly="readonly" value=${nombres}>
+
+	<label for="apellidos">Apellido paterno</label>
+	<input type="text" name="ap" id="apellidop" readonly="readonly" value=${ap}>
+	<label for="apellidos">Apellido materno</label>
+	<input type="text" name="am" id="apellidom" readonly="readonly" value=${am}>
+	<label for="apellidos">Sexo</label>
+	<input type="text" name="sexo" id="sexo" maxlength="1"readonly="readonly" value=${sexo}>
+	<label for="apellidos">Edad</label>
+	<input type="text" name="edad" id="edad" readonly="readonly" value=${edad}>
+	<label for="apellidos">Ocupacion</label>
+	<input type="text" name="ocupacion" id="ocupacion" readonly="readonly" value=${ocupacion}>
+
+        <label for="apellidos">Nacion</label>
+	<input type="text" name="nacionalidad" id="nacionalidad" readonly="readonly" value=${nacion}>
+        
+        <label for="apellidos">Religion</label>
+	<input type="text" name="religion" id="religion" readonly="readonly" value=${religion}>
+        <h1 align="center">Datos de contacto</h1>
+      
+        <label for="calle">Calle</label>
+	<input type ="text" name="calle" id="calle" readonly="readonly" value=${calle}>
+        
+    <label for="asunto">Numero</label>
+	<input type ="text" name="numero" id="numero" readonly="readonly" value=${numero}>
+        
+        <label for="asunto">Colinia</label>
+	<input type ="text" name="colonia" id="colonia" readonly="readonly" value=${colonia}>
+        
+        <label for="asunto">Municipio</label>
+	<input type ="text" name="municipio" id="municipio" readonly="readonly" value=${municipio}>
+        
+        <label for="asunto">Estado</label>
+	<input type ="text" name="estado" id="estado" readonly="readonly" value=${estado}>
+        
+        <label for="asunto">Telefono</label>
+	<input type ="text" name="telefono" id="telefono" readonly="readonly" value=${telefono}>
+        
+	<label for="email" />Email</label>
+	<input type="email" name="email" id="email" readonly="readonly" value=${email} >
+
+        <h1 align="center">Salud</h1>
+        
+	<label for="asunto">Numero Seguro S.</label>
+	<input type ="text" name="segurosocial" id="sangre"readonly="readonly" value=${ segurosocial}>
+	<label for="asunto">Discapacidades</label>
+	<input type ="text" name="discapacidades" id="sangre"readonly="readonly" value=${discapacidades}>
+        
+        
+       <label for="asunto">Enferm Cron</label>
+	<input type ="text" name="enfermedadescronicas" id="enfermedadescronicas" readonly="readonly" value=${enfermedadescronicas}>
+        
+        
+</form>
+    </body>
+</html>

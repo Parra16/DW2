@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Controlador;
+
+import com.mysql.jdbc.PreparedStatement;
+import java.sql.*;
+
+/**
+ *
+ * @author kevin
+ */
+public class modificarvehi extends Conexion{
+   public void modificarvehiculo(int id, String marca){
+        PreparedStatement pst=null;
+      try{
+        String consultas="update vehiculo set marca ="+marca+" where idvehiculo="+id+";";
+          pst=(PreparedStatement) getconexionn().prepareStatement(consultas);
+      
+        try{
+            pst.executeUpdate();
+        }catch(Exception e){
+            System.out.println(""+e);
+        }
+          
+        
+         
+        
+      }catch(Exception e){
+          System.out.println("error:"+e);
+      }finally{
+        try{
+              if (getconexionn()!=null)getconexionn().close();
+                if(pst!=null)pst.close();;
+        }catch(Exception e){
+            
+        }
+      }
+     
+   }
+   public void modis(int id, String marca, double precio, String modelo, String rines, String motor, String cilindrada, String clase, String version, String NCI, String tipo){
+        try{
+            
+            Connection cn=DriverManager.getConnection("jdbc:mysql://localhost/agenciavehicu", "root", "");
+      
+            java.sql.PreparedStatement pst= cn.prepareStatement("update vehiculo set marca = ?,precio=?, modelo=?, rines=?, motor=?, cilindrada=?, clase=?, version=?, NCI=?, tipo=? where idvehiculo = '"+ id+"'");
+            
+             pst.setString(1,marca);
+             pst.setDouble(2, precio);
+             pst.setString(3, modelo);
+             pst.setString(4, rines);
+             pst.setString(5, motor);
+             pst.setString(6, cilindrada);
+             pst.setString(7, clase);
+             pst.setString(8, version);
+             pst.setString(9, NCI);
+             pst.setString(10, tipo);
+            
+             
+             
+             
+             
+             
+             try{
+                 pst.executeUpdate();
+                  System.out.println("modificacion exitosa");
+             }catch(Exception e){
+                 System.out.println("*** Error en Update: ***");
+                 System.out.println(e);
+             }
+            
+            
+        }catch(Exception e){
+            
+        }
+   }
+
+}

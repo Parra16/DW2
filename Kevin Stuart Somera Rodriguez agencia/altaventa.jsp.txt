@@ -1,0 +1,48 @@
+<%-- 
+    Document   : altaventa
+    Created on : 28/05/2020, 03:15:32 PM
+    Author     : kevin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="buscas.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body bgcolor="#292820">
+        <form action="altaventa">
+            
+            <label for="nombre">ID vehiculo</label>
+	<input type="text" name="idv" id="idv" placeholder="Esc id de vehiculo"/>
+        <label for="nombre">ID personal</label>
+	<input type="text" name="idp" id="idp" placeholder="Esc id de personal"/>
+        
+        <label for="nombre">Nombre cliente</label>
+	<input type="text" name="nombrec" id="nombrec" placeholder="Esc nombre de cliente"/>
+        <label for="nombre">Apellido P</label>
+	<input type="text" name="apc" id="apc" placeholder="Esc  apellido paterno de cliente"/>
+        <label for="nombre">Apellido M</label>
+	<input type="text" name="amc" id="amc" placeholder="Esc  apellido materno de cliente"/>
+        <label for="nombre">Telefono</label>
+	<input type="text" name="telefono" id="telefono" placeholder="Esc telefono de cliente"/>
+        <label for="nombre">Colonia</label>
+	<input type="text" name="colonia" id="colonia" placeholder="Esc colonia de cliente"/>
+        <label for="nombre">Numero</label>
+	<input type="text" name="numero" id="numero" placeholder="Esc numero de cliente"/>
+        <label for="nombre">Municipio</label>
+	<input type="text" name="municipio" id="municipio" placeholder="Esc municipio de cliente"/>
+        <label for="nombre">Estado</label>
+	<input type="text" name="estado" id="estado" placeholder="Esc estado de cliente"/>
+        <label for="nombre">Fecha</label>
+	<input type="text" name="fecha" id="fecha" placeholder="Esc AÑO-MES-DIA"/>
+        <input type="submit" name="enviar" value="GENERAR VENTA"/>
+        
+            
+            
+            
+        </form>
+    </body>
+</html>
