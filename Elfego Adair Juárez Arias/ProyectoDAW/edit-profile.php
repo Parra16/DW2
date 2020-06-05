@@ -17,35 +17,34 @@ session_start();
 
   <body>
     <?php
-    if (isset($_SESSION['loggedin'])) {
+    /*if (isset($_SESSION['loggedin'])) {
     }
     else {
         echo "<div class='alert alert-danger mt-4' role='alert'>
         <h4>Necesitas inicar sesion de nuevo.</h4>
-        <p><a href='login.html'>Inicia Sesion Aqui!</a></p></div>";
+        <p><a href='main.html'>Inicia Sesion Aqui!</a></p></div>";
         exit;
-    }
+    }*/
     // checking the time now when check-login.php page starts
     $now = time();
-    if ($now > $_SESSION['expire']) {
-        session_destroy();
+    /*if ($now > $_SESSION['expire']) {
+        //session_destroy();
         echo "<div class='alert alert-danger mt-4' role='alert'>
         <h4>Tu sesion expiro!</h4>
-        <p><a href='login.html'>Login Here</a></p></div>";
+        <p><a href='main.html'>Login Here</a></p></div>";
         exit;
-        }
+      }*/
     ?>
 
     <div class="container">
         <p>Bienvenido: <?php echo $_SESSION['name']; ?></p>
         <h3>Edita tu perfil</h3>
         <ul>
-            <li>Cambiar Foto</li>
-            <li>Editar Biografia</li>
-            <li>Cambiar Contraseña</li>
-            <li>etc;</li>
+            <p><a href=""><strong><u>Cambiar foto de perfil</u></strong></a></p>
+            <p><a href=""><strong><u>Editar Información</u></strong></a></p>
+            <p><a href=""><strong><u>Cambiar Contraseña</u></strong></a></p>
         </ul>
-        <p><a href="logout.php">Cerrar Sesion</a></p>
+        <p><a href="muro.html">Regresar</a></p>
     </div>
 
 	<!-- Optional JavaScript -->

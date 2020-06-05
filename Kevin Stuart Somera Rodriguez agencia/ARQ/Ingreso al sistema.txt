@@ -1,0 +1,8 @@
+Habra dos "usuarios", le gerente y los empelados
+El login reconocera los apartados de cada uno.
+
+
+Si es empleado: ID-id asignado/Contraseña:123456 (Para todos los empleados es igual). Si el empledo llega a ser elimindo no podra ingresar porque ya no existira su ID en la base de datos.
+Si es gerente: ID=0, Contraseña="gerente1"
+
+
