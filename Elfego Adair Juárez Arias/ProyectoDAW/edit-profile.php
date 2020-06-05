@@ -44,7 +44,6 @@ session_start();
             <p><a href=""><strong><u>Editar Información</u></strong></a></p>
             <p><a href=""><strong><u>Cambiar Contraseña</u></strong></a></p>
         </ul>
-        <p><a href="logout.php">Cerrar Sesion</a></p>
         <p><a href="muro.html">Regresar</a></p>
     </div>
 
