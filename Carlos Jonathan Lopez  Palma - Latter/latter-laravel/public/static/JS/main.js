@@ -36,26 +36,6 @@
 		}
 	});
 
-	$('.tabla tbody').on('click','.btn',function(){
-		
-		var row = $(this).closest('tr');
-		var id = row.find('td:eq(0)').text();
-		var desc = row.find('td:eq(2)').text();
-		var fe = row.find('td:eq(3)').text();
-		var dataen = 'id='+id+'&desc='+desc+'&fecha='+fe;
-		$.ajax({
-			type:'post',
-			url:'EliminaReporte.php',
-			data:dataen,
-			success:function(resp){
-				if(resp==="true"){
-					document.getElementById("alerta").innerHTML='<div class="alert alert-success"><a href="" class="close" data-dismiss="alert">&times;</a>Reporte eliminado</div>';  
-				}
-			}
-		});
-		return false;
-	});
-
 	$('.tablaem tbody').on('click','.filaem',function(){
 		var row = $(this).closest('tr');
 		var id = row.find('td:eq(0)').text();
@@ -71,7 +51,7 @@
 		var dataen = 'id='+id;
 		$.ajax({
 			type:'post',
-			url:'BuscaEmpleado.php',
+			url:'static/PHP/BuscaEmpleado.php',
 			data:dataen,
 			success:function(resp){
 				var ar = resp.split(" ");
@@ -87,29 +67,46 @@
 		var td = t.parentNode;
         var tr = td.parentNode;
 		var table = tr.parentNode;
-        table.removeChild(tr);
+
+		var row = $(t).closest('tr');
+		var id = row.find('td:eq(0)').text();
+		var desc = row.find('td:eq(2)').text();
+		var fe = row.find('td:eq(3)').text();
+		var dataen = 'id='+id+'&desc='+desc+'&fecha='+fe;
+		$.ajax({
+			type:'post',
+			url:'static/PHP/EliminaReporte.php',
+			data:dataen,
+			success:function(resp){
+			}
+		});
+		table.removeChild(tr);
+		document.getElementById("alerta").innerHTML=
+		'<div class="alert alert-success alert-dismissable"><strong>Reporte eliminado</strong><button type="button" class="close" onclick="this.parentElement.style.display=\'none\';">&times;</button></div>';
+		return false;
 	}
 
 	$('.fm div').on('click','.btnel',function(){
 		var r = confirm("¿Está seguro de eliminar este empleado?\nNo se podra recuperar la información uan vez eliminada");
-		
 		if(r==true){
 			var id = document.getElementById('id').value;
 			var dataen = 'id='+id;
 			$.ajax({
 				type:'post',
-				url:'EliminaPersona.php',
+				url:'static/PHP/EliminaPersona.php',
 				data:dataen,
 				success:function(resp){
 					if(resp="eliminado"){
-						document.getElementById("alerta").innerHTML='<div class="alert alert-success"><a href="" class="close" data-dismiss="alert">&times;</a>Empleado eliminado</div>';  
+						document.getElementById("alerta").innerHTML=
+						'<div class="alert alert-success"><a href="" class="close" data-dismiss="alert">&times;</a>Empleado eliminado</div>';  
 					}
 						
 				}
 			});
-		return false;
+		return true;
 		}
 	});
+
 
 	
 	
