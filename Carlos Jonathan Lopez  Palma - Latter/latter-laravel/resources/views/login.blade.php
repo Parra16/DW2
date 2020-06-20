@@ -11,7 +11,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
 		integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"">
-	<link rel=" stylesheet" href="css/custom.css">
+	<link rel=" stylesheet" href="static/css/custom.css">
 </head>
 
 <body>
@@ -57,10 +57,26 @@
 						<p><a href="#showForm" data-toggle="collapse" aria-expanded="false" aria-controls="collapse"
 								class="text"><strong>Recuperar contraseña</strong></a>
 						</p>
-						<div id="alerta"></div>
+						@if(session('error'))
+							<div class="alert alert-danger alert-dismissible fade show" role="alert">
+								{{session('error')}}
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    								<span aria-hidden="true">&times;</span>
+  								</button>
+							</div>
+						@endif
+						@if(session('success'))
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								{{session('success')}}
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    								<span aria-hidden="true">&times;</span>
+  								</button>
+							</div>
+						@endif
 						<div class="collapse" id="showForm">
 							<div class='well'>
-							<form name="form1" method="post" onsubmit="return recuperacion()">
+								<form method="POST" action="{{route('recupe')}}">
+								@method('PUT')
 								@csrf
 									<div class="form-group">
 										<input type="email" class="form-control" name="email" id="email"

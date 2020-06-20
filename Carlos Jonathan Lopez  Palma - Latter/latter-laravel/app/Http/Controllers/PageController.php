@@ -9,11 +9,6 @@ use DB;
 
 class PageController extends Controller
 {
-    
-    
-    
-
-    
-
+   
     
 }

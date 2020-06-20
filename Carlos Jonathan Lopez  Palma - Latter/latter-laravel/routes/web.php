@@ -13,7 +13,7 @@ Route::put('/', 'RegistroEntradaController@registraentrada')->name('regentrada')
 
 Route::get('login','LoginController@login')->name('loginn');//login
 Route::post('login', 'LoginController@entrar')->name('entrar');//entar
-
+Route::put('login', 'LoginController@recuperar')->name('recupe');//recuperar
 
 Route::view('inicio_AD{id}', 'InicioAdmin')->name('inicioa');//inico admin
 Route::view('inicio_US{id}', 'InicioUsua')->name('iniciob');//inico usuario
@@ -41,6 +41,5 @@ Route::put('infocontacto', 'InformacionContactoController@editarinf')->name('edi
 
 
 Route::get('reportes', 'ReportesUsuariosController@userreportes')->name('userrep');//reportes usuario
-
 
 

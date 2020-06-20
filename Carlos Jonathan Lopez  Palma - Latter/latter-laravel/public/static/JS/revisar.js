@@ -63,8 +63,10 @@ function entrada() {
 }
 
 function recuperacion(){
+    alert('SI');
     var email = document.getElementById('email').value;
     var dataen = 'email='+email;
+    
     $.ajax({
         type:'post',
         url:'RecuperaPassEnCo.php',

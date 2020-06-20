@@ -11,11 +11,15 @@ class CorreoRecuperacion extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct($nombre, $app, $apm, $usuario, $contra)
+    public $nombre;
+    public $app;
+    public $usuario;
+    public $contrasena;
+
+    public function __construct($nombre, $app, $usuario, $contra)
     {
         $this->nombre = $nombre;
         $this->app = $app;
-        $this->apm = $apm;
         $this->usuario = $usuario;
         $this->contrasena = $contra;
     }
