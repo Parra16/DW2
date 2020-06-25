@@ -2,5 +2,9 @@ se muestra el registro de un nuevo usuario, validar que sea un correo real
  las diferentes opciones que ofrece la pagina de perfil 
 
 link del video 
-
+descargar archivo comprimido
 https://drive.google.com/file/d/1Vu1n5jhllqw4q8_5b1m6ifisCMG_i1dU/view?usp=sharing
+
+ver video directamente
+
+https://drive.google.com/file/d/1myGHtDWzi1P0SVfcTKDmVZYL_UH0Dzkh/view?usp=sharing
