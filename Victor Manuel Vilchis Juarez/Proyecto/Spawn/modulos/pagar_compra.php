@@ -32,7 +32,7 @@ if(isset($subir)){
 <tr>
 	<td>Transferencia Bancaria</td>
 	<td>0000-000-000</td>
-	<td>Anyelber Boscan</td>
+	<td>La tienda de refacciones skynet</td>
 	<th><a target="_blank" href="https://google.com"> Ir al pago </a></th>
 </tr>
 </table>
