@@ -130,9 +130,13 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nco' => [
+            'different' => 'Nueva contraseña diferente a la anterior',
         ],
+        'rco' => [
+            'same' => 'Nueva contraseña no coincide',
+        ],
+
     ],
 
     /*

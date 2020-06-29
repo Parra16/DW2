@@ -26,7 +26,6 @@ class CreatePersonasTable extends Migration
             $table->bigInteger('TELEFONO');
             $table->string('EMAIL');
             $table->integer('NSEGURO');
-            $table->timestamps();
         });
     }
 

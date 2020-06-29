@@ -24,9 +24,9 @@
         <br>
         <div class="row">
             <div class="col-md-8">
-                <p class="label-rep">ID: {{ $persona[0]->IDPERSONA }} </p>
-                <p class="label-rep">Nombre: {{ $item[0]->NOMBRE }} {{ $item[0]->APELLIDOPA }} {{ $item[0]->APELLIDOMA }}</p>
-            </div>
+                <p class="label-rep">ID: {{session()->get('id')}} </p>
+                <p class="label-rep">Nombre: {{session()->get('name')}} {{session()->get('ap')}}</p>
+                </div>
         
             <div class="col-md-4">
                 <p class="label-rep" id="dia"></p>
