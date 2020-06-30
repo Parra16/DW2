@@ -1,0 +1,45 @@
+
+body
+{
+	background: url("../IMAGENES/escuela.jpg");
+	font-family: sans-serif;
+}
+
+h1	{
+	font-size: 2rem;
+	line-height: 1.3em;
+	text-align: center;
+	margin-top: 0;
+	background: #0000;
+	font-size: 40px;
+	color: #fff;
+	border-radius: 3px;
+}
+
+}
+form{
+	background:#1B0011;
+	text-align: center;
+	width: 400px;
+	height: 800px; 
+}
+label{
+	color:#FFFFFF;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+
+}
+input{
+	background:#00000;
+	
+
+}
+#login{
+	margin-left: 35%;
+	margin-right: 25%;
+	margin-top: 10%;
+	letter-spacing: 15%;
+	font-size: 40px;
+
+}
