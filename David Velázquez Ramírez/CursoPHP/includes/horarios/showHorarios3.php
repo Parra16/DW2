@@ -26,7 +26,6 @@
     $arrayData2 = $manipulaMaterias->consultaMateria($idsemestre);
     $arrayData3 = $manipulaProfesores->consultaProfesor($idsemestre);
 
-    print("<br>");
 
     if ($arrayData2 != false) {
 

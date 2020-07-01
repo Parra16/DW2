@@ -54,9 +54,14 @@ class manipulaNotas extends DB
 
     public function eliminaNotas($idusuario, $idnota)
     {
-        $query = $this->connect()->prepare('DELETE FROM notas WHERE IDUsuario = :idusario AND IDNotas = :idnotas');
-        $arrayData = $query->execute(['idusario' => $idusuario, 'idnotas' => $idnota]);
+        try {
+            $query = $this->connect()->prepare('DELETE FROM notas WHERE IDUsuario = :idusario AND IDNotas = :idnotas');
+            $arrayData = $query->execute(['idusario' => $idusuario, 'idnotas' => $idnota]);
 
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+        
         return $arrayData;
     }
 
