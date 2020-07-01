@@ -1,56 +1,95 @@
-<?php
+<div>
+    <?php
 
-include_once '/xampp/htdocs/CursoPHP/includes/escuelas/manipulaEscuelas.php';
+    include_once '/xampp/htdocs/CursoPHP/includes/escuelas/manipulaEscuelas.php';
+    //Reset del methodo POST
+    unset($_POST['nameEscuela']);
 
-$manipulaEscuelas = new manipulaEscuelas();
+    $manipulaEscuelas = new manipulaEscuelas();
+    $arrayData = $manipulaEscuelas->consultaEscuela($_SESSION['IDUsuario']);
+    $i = 0;
 
-$arrayData = $manipulaEscuelas->consultaEscuela($_SESSION['IDUsuario']);
+    if ($arrayData == false) {
+    ?>
+        <section class="container-fluid">
+            <div class="form-container">
+                <form action="/CursoPHP/includes/escuelas/altaEscuelasForm.php" method="POST">
+                    <div class="form-group">
+                        <h2>Alta de escuelas</h2>
+                        <br>
+                        <label for="">Nombre de la escuela: </label>
+                        <input type="text" name="nameEscuela" class="form-control" placeholder="Ingresa el nombre de la escuela" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Dar de alta</button>
+                </form>
+            </div>
 
-$i = 0;
+        </section>
+        <hr>
+        <h3 class="titulo">No hay escuelas registradas</h3>
+    <?php
+    } else {
+    ?>
+        <section class="container-fluid">
+            <div class="form-container">
+                <form action="/CursoPHP/includes/escuelas/altaEscuelasForm.php" method="POST">
+                    <div class="form-group">
+                        <h2>Alta de escuelas</h2>
+                        <br>
+                        <label for="">Nombre de la escuela: </label>
+                        <input type="text" name="nameEscuela" class="form-control" placeholder="Ingresa el nombre de la escuela" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Dar de alta</button>
+                </form>
+            </div>
 
-if (!isset($arrayData)) {
-    echo "<h2 class=" . "botonera" . ">Seleccione las opciones disponibles</h2>";
-    echo "<br>";
-    echo "<nav class=" . "menu_lateral" . ">
-            <a href=" . "/CursoPHP/vistas/escuelas/conectorEA.php" . ">Altas</a>
-        </nav>";
-    echo "<br>";  
-    echo "<h3 class=" . "titulo" . ">Consulta tus escuelas registradas</h3>";
-    echo "<br>";
-    echo "<h4>No hay escuelas registradas</h4>";
-} else {
-    //Codigo html de Consulta Escuelas
-    echo "<h2 class=" . "botonera" . ">Seleccione las opciones disponibles</h2>";
-    echo "<br>";
-    echo "<nav class=" . "menu_lateral" . ">
-            <a href=" . "/CursoPHP/vistas/escuelas/conectorEA.php" . ">Altas</a>
-            <a href=" . "/CursoPHP/vistas/escuelas/conectorEB.php" . " class=" . "boton-menu" . ">Bajas</a>
-            <a href=" . "/CursoPHP/vistas/escuelas/conectorEM.php" . ">Modificaciones</a>
-        </nav>";
-    echo "<br>";
-    echo "<h3 class=" . "titulo" . ">Consulta tus escuelas registradas</h3>";
-    echo "<div class=" . "grid-options" . ">";
+        </section>
+        <hr>
+        <h3 class="titulo">Consulta tus escuelas registradas</h3>
+        <div class="grid-options">
 
-    echo "<table class=" . "table" . ">";
-    echo "<thead class=" . "thead-light" . ">";
-    echo "<tr>";
-    echo "<th>IDEscuela</th>";
-    echo "<th>NombreEscuela</th>";
-    echo "</tr>";
-    echo "</thead>";
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nombre de la Escuela</th>
+                        <th>Opciones disponibles</th>
+                        <th></th>
+                    </tr>
+                </thead>
 
-    while ($i != count($arrayData)) {
+                <?php
+                while ($i != count($arrayData)) {
+                    echo "<tr>";
+                    $nombreEscuela = $arrayData[$i]->NombreEscuela;
+                    echo "<td> $nombreEscuela </td>";
+                ?>
 
-        echo "<tr>";
-        $idescuela = $arrayData[$i]->IDEscuela;
-        echo "<th> $idescuela </th>";
-        $nombreEscuela = $arrayData[$i]->NombreEscuela;
-        echo "<td> $nombreEscuela </td>";
-        echo "</tr>";
+                    <td>
+                        <form method="POST" id="baja_<?php echo $i; ?>" action="/CursoPHP/includes/escuelas/bajaEscuelasForm.php">
+                            <input type="hidden" name="baja" value="<?php echo $i; ?>">
+                            <input type="submit" value="Eliminar" class="btn btn-danger">
+                        </form>
 
+                    </td>
+                    <td>
+                        <form method="POST" id="modify<?php echo $i; ?>" action="/CursoPHP/includes/escuelas/conectaModify.php">
+                            <input type="hidden" name="modificaID" value="<?php echo $i; ?>">
+                            <input type="hidden" name="modificaNAME" value="<?php echo $arrayData[$i]->NombreEscuela ?>">
+                            <input type="submit" value="Modificar" class="btn btn-warning">
+                        </form>
+                    </td>
+                    </tr>
 
-        $i++;
+                <?php
+                    $i++;
+                }
+                ?>
+
+            </table>
+        </div>
+
+    <?php
     }
-    echo "</table>";
-    echo "</div>";
-}
+    ?>
+
+</div>

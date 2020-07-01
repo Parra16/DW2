@@ -16,15 +16,14 @@ class manipulaUser extends DB
     public function createUser($correo)
     {
         //Relizo la preparacion de mi query utilizando PDO
-        $query = $this->connect()->prepare('SELECT * FROM users WHERE Correo = :correo');
+        $query = $this->connect()->prepare('SELECT Correo FROM users WHERE Correo = :correo');
         $query->execute(['correo' => $correo]);
         //Guardo el obj PDO en cadenaValida
         $this->cadenaValida = $query->fetch();
 
         //si el resultado retorna true no inserta, de lo contrario inserta
-        if ($this->cadenaValida) {
+        if (!$this->cadenaValida == null || !$this->cadenaValida == " ") {
             //El usuario ya existe, hay que retornar mensaje de lo que paso
-
             return $resultado = true;
         }else
         {

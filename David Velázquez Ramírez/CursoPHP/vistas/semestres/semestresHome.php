@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agenda Web Escuelas</title>
+    <title>Agenda Web Semestres</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c42e92f9a5.js" crossorigin="anonymous"></script>
 
@@ -36,8 +36,8 @@
         </header>
 
         <nav class="menu_lateral">
-            <a href="/CursoPHP/vistas/escuelas/indexEscuelas.php" class="active"><i class="fas fa-school"></i> Escuelas</a>
-            <a href="/CursoPHP/vistas/semestres/indexSemestres.php" class="boton-menu"><i class="fas fa-vote-yea"></i> Semestres</a>
+            <a href="/CursoPHP/vistas/escuelas/indexEscuelas.php"><i class="fas fa-school"></i> Escuelas</a>
+            <a href="/CursoPHP/vistas/semestres/indexSemestres.php" class="active"><i class="fas fa-vote-yea"></i> Semestres</a>
             <a href="/CursoPHP/vistas/materias/indexMaterias.php"><i class="fas fa-book-open"></i> Materias</a>
             <a href="/CursoPHP/vistas/profesores/indexProfesores.php"><i class="fas fa-chalkboard-teacher"></i> Profesores</a>
             <!--<a href="/CursoPHP/vistas/horarios/indexHorarios.php"><i class="fas fa-clock"></i> Horarios</a>-->
@@ -52,9 +52,9 @@
             <?php
 
             if ($_SESSION['Nav'] == 1) {
-                include_once '/xampp/htdocs/CursoPHP/includes/escuelas/showEscuelas.php';
+                include_once '/xampp/htdocs/CursoPHP/includes/semestres/showSemestres.php';
             } else if ($_SESSION['Nav'] == 2) {
-                include_once '/xampp/htdocs/CursoPHP/includes/escuelas/showEscuelasM.php';
+                include_once '/xampp/htdocs/CursoPHP/includes/semestres/showSemestres2.php';
             }
 
             ?>
@@ -62,12 +62,12 @@
 
         </main>
     </div>
+
     <footer class="card-footer">
         <div class="container">
             <span class="text-muted">Developed by David Velázquez Ramírez Copyright © 2020</span>
         </div>
     </footer>
-
 
     <script src="/CursoPHP/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

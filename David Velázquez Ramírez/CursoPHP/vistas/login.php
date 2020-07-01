@@ -22,12 +22,12 @@
                         <h2>Inicia sesión</h2>
                         <div class="form-group">
                             <label>Correo: </label>
-                            <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="Ingresa tu correo electronico">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="Ingresa tu correo electronico" required>
+                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con terceros.</small>
                         </div>
                         <div class="form-group">
                             <label>Password: </label>
-                            <input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña">
+                            <input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
                         <br>

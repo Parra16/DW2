@@ -7,13 +7,13 @@ $userSession = new UserSession();
 $user = new User();
 
 if (isset($_SESSION['Correo'])) {
-    //echo "hay sesion";
-    $userSession->setCurrentUser($_SESSION['Correo'], $_SESSION['IDUsuario'], 1);
-    include_once '/xampp/htdocs/CursoPHP/vistas/escuelas/escuelasHome.php';
+  //echo "hay sesion";
+  $userSession->setCurrentUser($_SESSION['Correo'], $_SESSION['IDUsuario'], 1);
+  include_once '/xampp/htdocs/CursoPHP/vistas/escuelas/escuelasHome.php';
 
-    $correoUser = $user->getCorreo();
+  $correoUser = $user->getCorreo();
 
-    echo "<script> 
+  echo "<script> 
         let timerInterval
 Swal.fire({
     position: 'top-end',
@@ -43,48 +43,12 @@ Swal.fire({
   }
 })
         </script>";
-} else if (isset($_POST['correo']) && isset($_POST['password'])) {
 
-    $userForm = $_POST['correo'];
-    $passForm = $_POST['password'];
-    $nav = $_POST['nav'];
-
-    $user = new User();
-    if ($user->userExists($userForm, $passForm)) {
-        //echo "Existe el usuario";
-        $user->setUser($userForm, $nav);
-
-        (string) $correoUser = $user->getCorreo();
-        (string) $idUsuario = $user->getIDUsuario();
-        (string) $nav = $user->getNavigation();
-
-
-        $userSession->setCurrentUser($correoUser, $idUsuario, $nav);
-
-        include_once 'vistas/escuelas/escuelasHome.php';
-
-        echo "<script> 
-        Swal.fire(
-        'Felicidades!',
-        'Accediste como: $correoUser',
-        'success'
-        )
-        </script>";
-    } else {
-        //echo "No existe el usuario";
-        include_once 'vistas/login.php';
-        echo "<script> 
-        Swal.fire({
-        icon: 'error',
-        title: 'Error...',
-        text: 'Nombre de usuario y/o password incorrecto',
-        })
-        </script>";
-    }
 } else {
-    //echo "login";
-    include_once 'vistas/login.php';
-    echo "<script> 
+  //echo "login";
+  $userSession->closeSession();
+  include_once '../../index.php';
+  echo "<script> 
         Swal.fire({
         icon: 'error',
         title: 'Upss...',
