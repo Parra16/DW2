@@ -1,0 +1,140 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background: url(../Imagenes/Vice.jpg) no-repeat center top;
+	background-size: cover;
+	background-attachment: fixed;
+	font-style: sans-serif;
+}
+header
+{
+	background: #fff;
+}
+h1
+{
+	text-align: center;
+	font-size: 70px;
+	color: #6fbde6;
+}
+.modal-dialog
+{
+	padding: 0 20px;
+}
+.img-users
+{
+	margin-top: -50px;
+	margin-bottom: 45px;
+}
+.main-section
+{
+	margin: auto;
+	margin-top: 20%;
+}
+.modal-content
+{
+	
+}
+
+.img-users img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 3px #000;
+    border-radius: 50%;
+    background: #fff;
+}
+.col-sm-8
+{
+	max-width: 66.666667%;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+}
+.form-group input
+{
+	height: 42px;
+	font-size: 18px;
+	border: 0;
+	padding-left: 54px;
+	border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top:4px;
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+    color: #af1670;
+}
+
+.form-group#contrasena-group::before{
+    content: "\f023";
+    color: #af1670;
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px;
+}
+
+.borde 
+{
+	background-color: gray;
+	height: 200px;
+}
+.borde1 
+{
+	background-color: aquamarine;
+	text-align: center;
+	height: 50px;
+}
+.borde2 
+{
+	height: 50px;
+	text-align: center;
+	background-color: olivedrab;
+}
+.borde3 
+{
+	height: 50px;
+	text-align: center;
+	background-color: orangered;
+}
+.row
+{
+	
+}
+.columnaCabezera1, .columnaCabezera2
+{
+	background: white;
+	height: 100px;
+}
+.img_logo
+{
+	position: relative;
+	padding: 0px;
+	width: 120px;
+	height: 100px;
+	float: left;
+}
+.logo
+{
+	float: left;
+}
+#btnAcceso
+{
+	background: #6fbde6;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 5px;
+}
+#btnAcceso:hover
+{
+	background: #ed419c;
+	color: #fff;
+}

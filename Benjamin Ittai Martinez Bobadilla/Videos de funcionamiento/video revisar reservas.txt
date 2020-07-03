@@ -1,0 +1,6 @@
+se ingresa a una cuenta en la que ya se hicieron reservas anteriormente se muestran las reservas vencidas 
+y las reservas por llegar, se muestra como se editan los testimonios se muestra la opcion para hacer nuevas compras 
+
+link del video
+
+https://drive.google.com/file/d/1H4AOXxCFlIqX17vdmfnpEw4pVyfaajTp/view?usp=sharing
