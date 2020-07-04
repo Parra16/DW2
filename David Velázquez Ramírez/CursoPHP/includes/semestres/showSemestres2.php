@@ -54,7 +54,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -117,7 +116,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -180,7 +178,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -243,7 +240,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -306,7 +302,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -369,7 +364,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -432,7 +426,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -494,7 +487,6 @@
     ?><section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">
@@ -557,7 +549,6 @@
         <section class="container-fluid">
             <div class="form-container">
                 <h2>Altas semestres</h2>
-                <?php echo "<h4> " . count($arrayData2) . "</h4>"; ?>
                 <br>
                 <form action="/CursoPHP/includes/semestres/altaSemestreForm.php" method="POST">
                     <div class="input-group mb-3">

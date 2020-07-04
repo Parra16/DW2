@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">E-mail: </label>
-                        <input type="text" name="emailP" class="form-control" placeholder="Ingresa el email del profesor" required>
+                        <input type="email" name="emailP" class="form-control" placeholder="Ingresa el email del profesor" required>
                     </div>
                     <input type="hidden" name="nombreSem" value="<?php echo $nombresemestre; ?>">
                     <input type="hidden" name="idSem" value="<?php echo $idsemestre; ?>">

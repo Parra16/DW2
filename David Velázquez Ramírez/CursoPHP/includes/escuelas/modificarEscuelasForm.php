@@ -13,6 +13,11 @@ $idescuela = $_POST['modificaID'];
 //Validacion BackEnd
 if ($_POST['nameEscuela'] != "") {
     //EL formulario se lleno correctamente
+
+    $query = $manipulaEscuelas->modificaEscuela(
+        $idescuela,
+        $namescuela,
+    );
     if (!$query) {
         //Reset del methodo POST
         unset($_POST['modificaID']);

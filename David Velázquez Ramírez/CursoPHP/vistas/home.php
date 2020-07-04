@@ -68,6 +68,7 @@
                 <h4><i class="fas fa-check"></i> Tener control de tus Materias</h4>
                 <h4><i class="fas fa-check"></i> Tener control de tus Profesores</h4>
                 <h4><i class="fas fa-check"></i> Tener control de tus Notas</h4>
+                <h4><i class="fas fa-check"></i> Visualización de calendario</h4>
             </div>
 
 
@@ -76,7 +77,7 @@
     </div>
     <footer class="card-footer">
         <div class="container">
-            <span class="text-muted">Developed by David Velázquez Ramírez Copyright © 2020</span>
+            <span class="text-muted">Developed by David Velázquez Ramírez Copyright © 2020 Early Version 1.0</span>
         </div>
     </footer>
 

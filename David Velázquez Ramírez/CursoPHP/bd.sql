@@ -46,11 +46,13 @@ create table profesores(
 
 create table horarios(
     IDHorario int primary key,
+    IDSemestre int,
     IDMateria int,
     IDProfesor int,
     Dia varchar(20),
     HoraEntrada time,
     HoraSalida time,
+    foreign key (IDSemestre) references semestre (IDSemestre),
     foreign key (IDMateria) references materias (IDMateria),
     foreign key (IDProfesor) references profesores (IDProfesor)
 );

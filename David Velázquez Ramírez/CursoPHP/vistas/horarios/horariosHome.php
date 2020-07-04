@@ -70,7 +70,7 @@
 
     <footer class="card-footer">
         <div class="container">
-            <span class="text-muted">Developed by David Velázquez Ramírez Copyright © 2020</span>
+            <span class="text-muted">Developed by David Velázquez Ramírez Copyright © 2020 Early Version 1.0</span>
         </div>
     </footer>
 

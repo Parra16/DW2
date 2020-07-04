@@ -47,7 +47,7 @@ Swal.fire({
 } else {
   //echo "login";
   $userSession->closeSession();
-  include_once '../../index.php';
+  include_once '/xampp/htdocs/CursoPHP/vistas/login.php';
   echo "<script> 
         Swal.fire({
         icon: 'error',

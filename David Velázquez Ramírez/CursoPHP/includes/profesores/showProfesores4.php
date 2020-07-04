@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">E-mail: </label>
-                    <input type="text" name="emailP" class="form-control" placeholder="Ingresa el email del profesor que sustituira a '<?php echo $arrayData1[$_POST['modP']]->Email; ?>'" required>
+                    <input type="email" name="emailP" class="form-control" placeholder="Ingresa el email del profesor que sustituira a '<?php echo $arrayData1[$_POST['modP']]->Email; ?>'" required>
                 </div>
                 <input type="hidden" name="idProf" value="<?php echo $_POST['idProf']; ?>">
                 <button type="submit" class="btn btn-primary">Modificar</button>
