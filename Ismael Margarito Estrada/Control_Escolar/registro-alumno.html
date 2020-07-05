@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Registro Alumno</title>
+	<link rel="stylesheet" type="text/css" href="css/cssX.css">
+</head>
+<body>
+
+<form action="PHP/r-a.php" method="POST">
+	<header>
+		<div>
+			<img src="img/logo1.png" class="logo">
+		</div>
+		<h1>Centro de Educacion Media Superior 22 Temoaya</h1>
+
+		<nav>
+   	     <ul class="menu">
+			<li><a href="http://localhost/Control_Escolar/PHP/datos.php">Datos Personales</a></li>
+            <li><a href="http://localhost/Control_Escolar/registro-alumno.html">Registro de Alumno</a></li>
+            <li><a href="http://localhost/Control_Escolar/trayectoria.html">Trayectoria Academica</a></li>
+            <li><a href="http://localhost/Control_Escolar/calificaciones.html">Registro de Calificaciones</a></li>
+			<li><a href="http://localhost/Control_Escolar/PHP/alumnos-registrados.php">Alumnos Registrados</a></li>
+			<li><a href="http://localhost/Control_Escolar/close.html">Cerrar Sesion</a></li>    
+          </ul>
+		</nav>
+	</header>
+
+	<section class="wrapper">
+		<section class="main">
+		<br><br/>
+			<h3>Registro de Alumnos </h3>
+			<label for="nom" class="nom">Nombre</label>
+			<input type="text" name="nombre" id="nombre" class="nombre">
+			<br><br/>
+
+			<label>Apellido Paterno</label>
+			<input type="text" name="apaterno" class="apaterno" class="apaterno">
+			<br><br/>
+
+			<label>Apellido Materno</label>
+			<input type="text" name="amaterno" class="amaterno" id="">
+			<br><br/>
+
+			<label>Numero de cuenta</label>
+			<input type="text" name="nocuenta" class="nocuenta" id="">
+
+			<br><br/>
+			<label>Contraseña</label>
+			<input type="password" name="contrasena" class="contrasena" id="">
+
+			<br><br/>
+			<label>Correo electronico</label>
+			<input type="email" name="correo" class="correo" id="">
+			<br><br/>
+
+			<label>Curp</label>
+			<input type="text" name="curp" class="curp" id="">
+			<br><br/>
+
+			<label>Dirección</label>
+			<input type="text"  name="direccion" class="direccion" id="">
+			<br><br/>
+
+			<label>Telefono</label>
+			<input type="text"  name="telefono" class="telefono" id="">
+			<br><br/>
+
+			<input type="submit" value ="Registrarse" name="registro" class="registro" >
+
+			<br><br/>
+		
+		</section>
+		<aside></aside>
+	</section>
+
+	<footer>
+		<br><br/>
+		<p>Derechos reservados por @Colegio de bachilleres de Estado de México</p>
+		<br><br/>
+	</footer>
+
+</form>
+</body>
+</html>

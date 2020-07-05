@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Registro Calificaciones</title>
+	<link rel="stylesheet" type="text/css" href="css/cssB.css">
+</head>
+<body>
+
+	<form action="PHP/registro.php" method="POST">
+	<header>
+		<div>
+			<img src="img/logo1.png" class="logo">
+		</div>
+		<h1>Centro de Educacion Media Superior 22 Temoaya</h1>
+
+		<nav>
+   	     <ul class="menu">
+         
+			<li><a href="http://localhost/Control_Escolar/PHP/datos.php">Datos Personales</a></li>
+            <li><a href="http://localhost/Control_Escolar/registro-alumno.html">Registro de Alumno</a></li>
+            <li><a href="http://localhost/Control_Escolar/trayectoria.html">Trayectoria Academica</a></li>
+            <li><a href="http://localhost/Control_Escolar/calificaciones.html">Registro de Calificaciones</a></li>
+			<li><a href="http://localhost/Control_Escolar/PHP/alumnos-registrados.php">Alumnos Registrados</a></li>
+			<li><a href="http://localhost/Control_Escolar/close.html">Cerrar Sesion</a></li>      
+          </ul>
+		</nav>
+	</header>
+
+	<section class="wrapper">
+		<section class="main">
+			<br><br/>
+            <h6>Registro de calificaciones </h6>
+
+            <label for="nom" class="nom">Nomero de cuenta:</label>
+            <input type="text" name="nocuenta" class="nocuenta">
+            
+            <br><br/>
+            <label for="nom" class="nom">Indicador:</label>
+			<input type="text" name="indicador" class="indicador" >
+            <br><br/>
+
+            <label for="nom" class="nom">Periodo:</label>
+			<input type="text" name="periodo" class="periodo" >
+            <br><br/>
+            <label for="nom" class="nom">Creditos:</label>
+			<input type="text" name="creditos" class="creditos" >
+            <br><br/>
+            
+			<label for="nom" class="nom">Materia: </label>
+			<input type="text" name="materia" class="materia" >
+            <br><br/>
+
+            <label for="nom" class="nom">Primer Parcial:</label>
+			<input type="text" name="pparcial" class="pparcial" >
+            <br><br/>
+
+            <label for="nom" class="nom">Segundo Parcial:</label>
+			<input type="text" name="sparcial" class="sparcial" >
+            <br><br/>
+
+            <label for="nom" class="nom">Ordinario:</label>
+			<input type="text" name="ordinario" class="ordinario" >
+            <br><br/>
+            
+			<label for="nom" class="nom">Extraordinario: </label>
+			<input type="text" name="extraordinario" class="extraordinario" >
+			<br><br/>
+
+            <input type="submit" value ="Registrarse" name="registro" class="registro" >
+
+			<br><br/>
+            
+
+
+		</section>
+		<aside></aside>
+	</section>
+
+	<footer>
+		<br><br/>
+		<p>Derechos reservados por @Colegio de bachilleres de Estado de México</p>
+		<br><br/>
+	</footer>
+
+</form>
+
+</body>
+</html>
